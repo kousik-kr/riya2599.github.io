@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Site map for Riya Goyal's website" />
+    <meta property="og:title" content="Sitemap - Riya Goyal" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <title>Sitemap - Riya Goyal</title>
+    <link rel="stylesheet" href="./src/styles/reset.css" />
+    <link rel="stylesheet" href="./src/styles/design-tokens.css" />
+    <link rel="stylesheet" href="./src/styles/main.css" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module">
+      import { profile } from './src/data/profile.js';
+      import { createNavigation } from './src/components/Navigation.js';
+      import { createPageFooter } from './src/components/PageFooter.js';
+      import { createElementFromHTML } from './src/utils/dom.js';
+
+      const createSitemap = () => createElementFromHTML(\`
+        <main class="page-content">
+          <section class="glass-panel">
+            <h1>Site Map</h1>
+            <p class="page-subtitle">Navigate through all pages and sections of the website</p>
+          </section>
+
+          <section class="glass-panel">
+            <h2>Main Pages</h2>
+            <ul class="sitemap-list">
+              <li><a href="/">Home</a> - Welcome and featured highlights</li>
+              <li><a href="/about.html">About</a> - Background and research interests</li>
+              <li><a href="/research.html">Research & Publications</a> - Academic publications and research work</li>
+              <li><a href="/projects.html">Projects</a> - Featured projects and open-source contributions</li>
+              <li><a href="/education.html">Education</a> - Academic credentials and degrees</li>
+              <li><a href="/experience.html">Experience</a> - Professional experience and internships</li>
+              <li><a href="/awards.html">Awards & Recognition</a> - Honors and achievements</li>
+              <li><a href="/teaching.html">Teaching</a> - Teaching experience and courses</li>
+              <li><a href="/skills.html">Skills</a> - Technical and professional skills</li>
+              <li><a href="/contact.html">Contact</a> - Get in touch and inquiry form</li>
+            </ul>
+          </section>
+
+          <section class="glass-panel">
+            <h2>Legal & Information</h2>
+            <ul class="sitemap-list">
+              <li><a href="/sitemap.html">Sitemap</a> - Navigation guide (you are here)</li>
+              <li><a href="/privacy.html">Privacy Policy</a> - Privacy and data protection information</li>
+              <li><a href="/terms.html">Terms of Use</a> - Terms and conditions</li>
+            </ul>
+          </section>
+
+          <section class="glass-panel">
+            <h2>Quick Links</h2>
+            <ul class="sitemap-list">
+              <li><a href="${profile.cvUrl}" target="_blank">Download Full CV (PDF)</a></li>
+              <li><a href="${profile.resumeUrl}" target="_blank">Download Resume (PDF)</a></li>
+              <li><a href="mailto:${profile.email}">Email Contact</a></li>
+            </ul>
+          </section>
+        </main>
+      \`);
+
+      const app = document.querySelector('#app');
+      const page = document.createElement('div');
+      page.className = 'page-shell';
+      page.append(
+        createNavigation(profile, 'sitemap'),
+        createSitemap(),
+        createPageFooter(profile)
+      );
+      app.append(page);
+    </script>
+  </body>
+</html>

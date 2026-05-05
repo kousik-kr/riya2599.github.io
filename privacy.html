@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Privacy policy for Riya Goyal's website" />
+    <meta property="og:title" content="Privacy Policy - Riya Goyal" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <title>Privacy Policy - Riya Goyal</title>
+    <link rel="stylesheet" href="./src/styles/reset.css" />
+    <link rel="stylesheet" href="./src/styles/design-tokens.css" />
+    <link rel="stylesheet" href="./src/styles/main.css" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module">
+      import { profile } from './src/data/profile.js';
+      import { createNavigation } from './src/components/Navigation.js';
+      import { createPageFooter } from './src/components/PageFooter.js';
+      import { createElementFromHTML } from './src/utils/dom.js';
+
+      const createPrivacy = () => createElementFromHTML(\`
+        <main class="page-content legal-content">
+          <section class="glass-panel">
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last updated: January 2025</p>
+          </section>
+
+          <section class="glass-panel">
+            <h2>1. Introduction</h2>
+            <p>
+              This privacy policy ("Policy") explains how Riya Goyal ("we," "us," "our," or "me") collects, uses, 
+              discloses, and safeguards your information when you visit this website (the "Site").
+            </p>
+          </section>
+
+          <section class="glass-panel">
+            <h2>2. Information We Collect</h2>
+            <p>We may collect information about you in a variety of ways. The information we may collect on the Site includes:</p>
+            <h3>Personal Data</h3>
+            <ul>
+              <li>Name</li>
+              <li>Email address</li>
+              <li>Phone number (optional)</li>
+              <li>Organization/Institution</li>
+              <li>Other information you voluntarily provide through contact forms or communications</li>
+            </ul>
+            <h3>Automatic Data Collection</h3>
+            <ul>
+              <li>IP address</li>
+              <li>Browser type and version</li>
+              <li>Pages visited and time spent</li>
+              <li>Referrer information</li>
+              <li>Device information</li>
+            </ul>
+          </section>
+
+          <section class="glass-panel">
+            <h2>3. Use of Your Information</h2>
+            <p>Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience. Specifically, we may use information collected about you via the Site to:</p>
+            <ul>
+              <li>Respond to your inquiries and fulfill your requests</li>
+              <li>Send promotional communications (with your consent)</li>
+              <li>Analyze website usage and improve the Site</li>
+              <li>Protect against fraudulent transactions</li>
+              <li>Comply with legal obligations</li>
+            </ul>
+          </section>
+
+          <section class="glass-panel">
+            <h2>4. Disclosure of Your Information</h2>
+            <p>
+              We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information. 
+              This does not include trusted third parties who assist us in operating our website, conducting our business, 
+              or serving our visitors, so long as those parties agree to keep this information confidential.
+            </p>
+          </section>
+
+          <section class="glass-panel">
+            <h2>5. Security of Your Information</h2>
+            <p>
+              We use administrative, technical, and physical security measures to protect your personal information. 
+              However, perfect security does not exist on the Internet. We cannot guarantee the absolute security of your information.
+            </p>
+          </section>
+
+          <section class="glass-panel">
+            <h2>6. Contact Us</h2>
+            <p>
+              If you have questions or comments about this Privacy Policy, please contact us at:
+            </p>
+            <ul>
+              <li>Email: <a href="mailto:${profile.email}">${profile.email}</a></li>
+              <li>Mail: ${profile.office}, ${profile.university}</li>
+            </ul>
+          </section>
+        </main>
+      \`);
+
+      const app = document.querySelector('#app');
+      const page = document.createElement('div');
+      page.className = 'page-shell';
+      page.append(
+        createNavigation(profile),
+        createPrivacy(),
+        createPageFooter(profile)
+      );
+      app.append(page);
+    </script>
+  </body>
+</html>

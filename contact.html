@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact Riya Goyal. Get in touch for research collaborations, speaking opportunities, or general inquiries."
+    />
+    <meta name="keywords" content="Contact, Email, Connect, Collaboration" />
+    <meta property="og:title" content="Contact - Riya Goyal" />
+    <meta property="og:description" content="Get in touch with Riya Goyal" />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://riyagoyal.com/contact" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <title>Contact - Riya Goyal</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./src/styles/reset.css" />
+    <link rel="stylesheet" href="./src/styles/design-tokens.css" />
+    <link rel="stylesheet" href="./src/styles/main.css" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module">
+      import { profile } from './src/data/profile.js';
+      import { createNavigation } from './src/components/Navigation.js';
+      import { createContact } from './src/components/Contact.js';
+      import { createPageFooter } from './src/components/PageFooter.js';
+
+      const app = document.querySelector('#app');
+      const page = document.createElement('div');
+      page.className = 'page-shell';
+
+      page.append(
+        createNavigation(profile, 'contact'),
+        createContact(profile),
+        createPageFooter(profile)
+      );
+
+      app.append(page);
+    </script>
+  </body>
+</html>

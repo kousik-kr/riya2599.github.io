@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="About Riya Goyal. PhD Student at Stanford University, researcher in machine learning and human-AI interaction."
+    />
+    <meta name="keywords" content="About, Bio, Profile, Riya Goyal, Stanford" />
+    <meta property="og:title" content="About - Riya Goyal" />
+    <meta property="og:description" content="Learn more about Riya Goyal" />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://riyagoyal.com/about" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <title>About - Riya Goyal</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./src/styles/reset.css" />
+    <link rel="stylesheet" href="./src/styles/design-tokens.css" />
+    <link rel="stylesheet" href="./src/styles/main.css" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module">
+      import { profile } from './src/data/profile.js';
+      import { createNavigation } from './src/components/Navigation.js';
+      import { createAbout } from './src/components/About.js';
+      import { createPageFooter } from './src/components/PageFooter.js';
+
+      const app = document.querySelector('#app');
+      const page = document.createElement('div');
+      page.className = 'page-shell';
+
+      page.append(
+        createNavigation(profile, 'about'),
+        createAbout(profile),
+        createPageFooter(profile)
+      );
+
+      app.append(page);
+    </script>
+  </body>
+</html>
