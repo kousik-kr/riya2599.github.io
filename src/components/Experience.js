@@ -2,12 +2,14 @@ import { createElementFromHTML, createList } from '../utils/dom.js';
 
 export const createExperience = ({ experiences }) =>
   createElementFromHTML(`
-    <section id="experience" class="content-section">
-      <div class="section-heading">
-        <p class="eyebrow">Professional Experience</p>
-        <h2>Internships & Work</h2>
-      </div>
-      <div class="experience-timeline">
+    <main class="page-content">
+      <section class="page-hero glass-panel">
+        <p class="eyebrow">Experience</p>
+        <h1>Research and AI internship experience</h1>
+        <p class="page-subtitle">Hands-on work across research, computer vision, and NLP problem settings.</p>
+      </section>
+
+      <section class="experience-timeline">
         ${createList(
           experiences,
           (exp) => `
@@ -15,15 +17,18 @@ export const createExperience = ({ experiences }) =>
               <div class="exp-header">
                 <div>
                   <h3>${exp.role}</h3>
-                  <p class="company"><i class="fa-solid fa-building"></i> ${exp.company}</p>
+                  <p class="company"><i class="fa-solid fa-building"></i> ${exp.organization}</p>
                 </div>
                 <span class="period">${exp.period}</span>
               </div>
-              <p class="location"><i class="fa-solid fa-map-pin"></i> ${exp.location}</p>
+              <p class="location"><i class="fa-solid fa-location-dot"></i> ${exp.location}</p>
               <p class="description">${exp.description}</p>
+              <ul class="detail-list">
+                ${createList(exp.highlights, (item) => `<li>${item}</li>`)}
+              </ul>
             </article>
           `
         )}
-      </div>
-    </section>
+      </section>
+    </main>
   `);

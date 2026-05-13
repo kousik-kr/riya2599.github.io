@@ -2,32 +2,31 @@ import { createElementFromHTML, createList } from '../utils/dom.js';
 
 export const createProjects = ({ projects }) =>
   createElementFromHTML(`
-    <section id="projects" class="content-section">
-      <div class="section-heading">
-        <p class="eyebrow">Portfolio</p>
-        <h2>Featured Projects</h2>
-      </div>
-      <div class="projects-grid">
+    <main class="page-content">
+      <section class="page-hero glass-panel">
+        <p class="eyebrow">Projects</p>
+        <h1>Applied AI and software portfolio</h1>
+        <p class="page-subtitle">A project set spanning NLP research, deep learning, healthcare prediction, and academic software systems.</p>
+      </section>
+
+      <section class="projects-grid">
         ${createList(
           projects,
           (project) => `
             <article class="project-card glass-panel">
               <div class="project-header">
-                <h3>${project.title}</h3>
-                <a href="${project.link}" class="project-link" aria-label="View project">
-                  <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                <span class="project-category">${project.category}</span>
+                <i class="fa-solid fa-arrow-up-right-from-square project-mark"></i>
               </div>
+              <h3>${project.title}</h3>
               <p class="project-description">${project.description}</p>
-              <div class="project-meta">
-                <div class="tech-stack">
-                  ${createList(project.technologies, (tech) => `<span class="tech-badge">${tech}</span>`)}
-                </div>
-                <p class="project-impact"><i class="fa-solid fa-star"></i> ${project.impact}</p>
+              <div class="tech-stack">
+                ${createList(project.technologies, (tech) => `<span class="tech-badge">${tech}</span>`)}
               </div>
+              <p class="project-impact"><i class="fa-solid fa-flask-vial"></i> ${project.impact}</p>
             </article>
           `
         )}
-      </div>
-    </section>
+      </section>
+    </main>
   `);

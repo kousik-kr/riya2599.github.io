@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Privacy policy for Riya Goyal's website" />
+    <meta name="description" content="Privacy policy for Riya Goyal's academic portfolio website." />
     <meta property="og:title" content="Privacy Policy - Riya Goyal" />
-    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+    <link rel="canonical" href="https://riya2599.github.io/privacy.html" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <title>Privacy Policy - Riya Goyal</title>
     <link rel="stylesheet" href="./src/styles/reset.css" />
     <link rel="stylesheet" href="./src/styles/design-tokens.css" />
@@ -21,77 +22,65 @@
 
       const createPrivacy = () => createElementFromHTML(\`
         <main class="page-content legal-content">
-          <section class="glass-panel">
+          <section class="page-hero glass-panel">
             <h1>Privacy Policy</h1>
-            <p class="last-updated">Last updated: January 2025</p>
+            <p class="last-updated">Last updated: May 13, 2026</p>
           </section>
 
           <section class="glass-panel">
             <h2>1. Introduction</h2>
             <p>
-              This privacy policy ("Policy") explains how Riya Goyal ("we," "us," "our," or "me") collects, uses, 
-              discloses, and safeguards your information when you visit this website (the "Site").
+              This website is a public academic portfolio for Riya Goyal. It is intended to share research,
+              project, and professional background information.
             </p>
           </section>
 
           <section class="glass-panel">
             <h2>2. Information We Collect</h2>
-            <p>We may collect information about you in a variety of ways. The information we may collect on the Site includes:</p>
-            <h3>Personal Data</h3>
-            <ul>
-              <li>Name</li>
-              <li>Email address</li>
-              <li>Phone number (optional)</li>
-              <li>Organization/Institution</li>
-              <li>Other information you voluntarily provide through contact forms or communications</li>
-            </ul>
-            <h3>Automatic Data Collection</h3>
-            <ul>
-              <li>IP address</li>
-              <li>Browser type and version</li>
-              <li>Pages visited and time spent</li>
-              <li>Referrer information</li>
-              <li>Device information</li>
+            <p>This site does not use a custom backend or account system. Information may be received only in limited cases:</p>
+            <ul class="detail-list">
+              <li>If you send an email, any information included in that email is voluntarily provided by you.</li>
+              <li>Standard hosting or browser logs may be collected by the hosting platform as part of normal web delivery.</li>
             </ul>
           </section>
 
           <section class="glass-panel">
             <h2>3. Use of Your Information</h2>
-            <p>Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience. Specifically, we may use information collected about you via the Site to:</p>
-            <ul>
-              <li>Respond to your inquiries and fulfill your requests</li>
-              <li>Send promotional communications (with your consent)</li>
-              <li>Analyze website usage and improve the Site</li>
-              <li>Protect against fraudulent transactions</li>
-              <li>Comply with legal obligations</li>
+            <p>Any information voluntarily shared through email may be used only to:</p>
+            <ul class="detail-list">
+              <li>Respond to your message</li>
+              <li>Continue a professional or academic conversation requested by you</li>
+              <li>Maintain basic correspondence records when necessary</li>
             </ul>
           </section>
 
           <section class="glass-panel">
             <h2>4. Disclosure of Your Information</h2>
             <p>
-              We do not sell, trade, or otherwise transfer to outside parties your personally identifiable information. 
-              This does not include trusted third parties who assist us in operating our website, conducting our business, 
-              or serving our visitors, so long as those parties agree to keep this information confidential.
+              Personal information received through direct communication is not sold or intentionally shared with third
+              parties, except where disclosure is required by law or necessary to protect rights and safety.
             </p>
           </section>
 
           <section class="glass-panel">
             <h2>5. Security of Your Information</h2>
             <p>
-              We use administrative, technical, and physical security measures to protect your personal information. 
-              However, perfect security does not exist on the Internet. We cannot guarantee the absolute security of your information.
+              Reasonable efforts are made to use standard email and hosting practices responsibly. No internet-based
+              transmission or storage system can be guaranteed to be fully secure.
             </p>
           </section>
 
           <section class="glass-panel">
-            <h2>6. Contact Us</h2>
-            <p>
-              If you have questions or comments about this Privacy Policy, please contact us at:
-            </p>
-            <ul>
+            <h2>6. External Links</h2>
+            <p>This website links to external platforms such as GitHub, LinkedIn, and DOI pages. Their privacy practices are governed by their own policies.</p>
+          </section>
+
+          <section class="glass-panel">
+            <h2>7. Contact</h2>
+            <p>For questions about this policy, please contact:</p>
+            <ul class="detail-list">
               <li>Email: <a href="mailto:${profile.email}">${profile.email}</a></li>
-              <li>Mail: ${profile.office}, ${profile.university}</li>
+              <li>Location: ${profile.location}</li>
             </ul>
           </section>
         </main>

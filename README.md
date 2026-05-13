@@ -1,187 +1,43 @@
-# Riya Goyal - Professional Portfolio Website
+# Riya Goyal Research Portfolio
 
-A modern, multi-page academic portfolio website featuring Riya Goyal's research, publications, education, and professional experience.
+Multi-page academic portfolio for Riya Goyal, positioned as an early-career AI researcher with work in NLP, deep learning, cybercrime analytics, and applied machine learning.
 
-## 🎨 Features
+## Site Overview
 
-### Multi-Page Architecture
-- **Separate Pages**: Each major section has its own dedicated page with proper navigation
-- **Home Page** (`/`) - Welcome page with highlights and key metrics
-- **About Page** (`/about.html`) - Comprehensive bio and research interests
-- **Research Page** (`/research.html`) - Publications and research work
-- **Projects Page** (`/projects.html`) - Featured projects and open-source contributions
-- **Education Page** (`/education.html`) - Academic credentials
-- **Experience Page** (`/experience.html`) - Professional internships and work
-- **Awards Page** (`/awards.html`) - Recognition and achievements
-- **Teaching Page** (`/teaching.html`) - Teaching experience
-- **Skills Page** (`/skills.html`) - Technical and professional skills
-- **Contact Page** (`/contact.html`) - Contact information and inquiry form
+- `index.html` - Research-facing landing page with hero, metrics, and differentiators
+- `about.html` - Background, research direction, and academic positioning
+- `research.html` - Publications and research themes
+- `projects.html` - Applied AI and software project portfolio
+- `education.html` - Academic history and scores
+- `experience.html` - Research and AI internship experience
+- `awards.html` - Recognition and milestones
+- `teaching.html` - Certifications and academic activities
+- `skills.html` - Technical skill groups and professional strengths
+- `contact.html` - Direct contact and professional links
 
-### Standard Site Elements
-✅ **Navigation** - Sticky header with responsive navigation menu
-✅ **Footer** - Comprehensive footer with:
-  - Copyright information with dynamic year
-  - Organized footer sections (About, Navigation, Resources, Connect)
-  - Social media links
-  - Footer meta links (Sitemap, Privacy, Terms)
+## Content Source
 
-✅ **Legal Pages**:
-  - Privacy Policy (`/privacy.html`)
-  - Terms of Use (`/terms.html`)
-  - Sitemap (`/sitemap.html`)
+Primary content is derived from `Riya_Goyal-1.pdf`.
 
-✅ **SEO & Metadata**:
-  - XML Sitemap (`sitemap.xml`)
-  - Robots.txt for search engine crawlers
-  - Open Graph meta tags
-  - Canonical URLs
+The main editable profile data lives in `src/data/profile.js`.
 
-✅ **Contact Features**:
-  - Contact information display
-  - Contact form with validation
-  - Social media links
-  - FAQ section
+## Tech Stack
 
-### Design System
-- Glass-morphism UI with blur effects
-- Smooth animations and transitions
-- Responsive grid layouts
-- Professional color scheme
-- Clean typography
+- Vanilla JavaScript modules
+- Static HTML pages
+- Shared component rendering
+- CSS custom properties and responsive layouts
 
-## 📁 Project Structure
+## Local Preview
 
-```
-riya_website/
-├── index.html              # Home page
-├── about.html              # About page
-├── research.html           # Research & publications
-├── projects.html           # Projects showcase
-├── education.html          # Educational background
-├── experience.html         # Professional experience
-├── awards.html             # Awards & recognition
-├── teaching.html           # Teaching experience
-├── skills.html             # Technical skills
-├── contact.html            # Contact & inquiry form
-├── privacy.html            # Privacy policy
-├── terms.html              # Terms of use
-├── sitemap.html            # HTML sitemap
-├── sitemap.xml             # XML sitemap for SEO
-├── robots.txt              # Search engine directives
-│
-└── src/
-    ├── main.js
-    ├── styles/
-    │   ├── reset.css
-    │   ├── design-tokens.css
-    │   └── main.css
-    ├── components/
-    │   ├── Navigation.js
-    │   ├── PageFooter.js
-    │   ├── About.js
-    │   ├── Contact.js
-    │   ├── Research.js
-    │   ├── Projects.js
-    │   ├── Education.js
-    │   ├── Experience.js
-    │   ├── Awards.js
-    │   ├── Teaching.js
-    │   ├── Skills.js
-    │   ├── Metrics.js
-    │   ├── Highlights.js
-    │   ├── Hero.js
-    │   └── more...
-    ├── utils/
-    │   └── dom.js
-    └── data/
-        └── profile.js
-```
-
-## 🚀 Getting Started
-
-### Installation
 ```bash
-git clone https://github.com/kousik-kr/riya_website.git
-cd riya_website
+python3 -m http.server 8000
 ```
 
-### Local Development
-```bash
-# Using Python
-python -m http.server 8000
+Then open `http://localhost:8000`.
 
-# Using Node.js
-npx http-server
+## Notes
 
-# Visit: http://localhost:8000
-```
-
-## 📝 Customization
-
-### Update Profile Data
-Edit `src/data/profile.js`:
-- Name, credentials, and contact info
-- Education and experience
-- Publications and research
-- Projects and awards
-- Skills and teaching
-- Social media links
-
-### Modify Content
-Each page component is in `src/components/`. Components follow a consistent pattern.
-
-### Customize Styling
-Edit CSS variables in `src/styles/design-tokens.css`:
-- Colors (primary, accent, text, etc.)
-- Spacing and sizing
-- Typography
-- Border radius and shadows
-
-## 🔍 SEO Features
-
-- ✅ XML Sitemap
-- ✅ Robots.txt
-- ✅ Open Graph meta tags
-- ✅ Semantic HTML
-- ✅ Mobile responsive
-- ✅ Fast load times
-
-## 📱 Responsive Design
-
-Works perfectly on:
-- Desktop (1920px+)
-- Tablet (768px - 1024px)
-- Mobile (320px - 767px)
-
-## 🎯 Pages
-
-| Page | URL | Purpose |
-|------|-----|---------|
-| Home | `/` | Welcome & highlights |
-| About | `/about.html` | Biography & interests |
-| Research | `/research.html` | Publications |
-| Projects | `/projects.html` | Portfolio projects |
-| Education | `/education.html` | Degrees & credentials |
-| Experience | `/experience.html` | Work history |
-| Awards | `/awards.html` | Recognition |
-| Teaching | `/teaching.html` | Courses & mentoring |
-| Skills | `/skills.html` | Technical skills |
-| Contact | `/contact.html` | Get in touch |
-| Privacy | `/privacy.html` | Privacy policy |
-| Terms | `/terms.html` | Terms of use |
-| Sitemap | `/sitemap.html` | Site navigation |
-
-## ⚡ Performance
-
-- Vanilla JavaScript (zero dependencies)
-- Minimal CSS
-- Optimized animations
-- Fast load times
-
-## 📞 Contact
-
-Email: riya.goyal@stanford.edu
-
----
-
-**Built with ❤️ for research, collaboration, and knowledge sharing**
+- Resume download points to `/Riya_Goyal-1.pdf`
+- Canonical URLs and sitemap target `https://riya2599.github.io`
+- `favicon.svg`, `robots.txt`, and `sitemap.xml` are included

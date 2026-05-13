@@ -1,220 +1,379 @@
+const monogramSvg = encodeURIComponent(`
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720">
+    <defs>
+      <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+        <stop offset="0%" stop-color="#173047" />
+        <stop offset="52%" stop-color="#0f766e" />
+        <stop offset="100%" stop-color="#d97706" />
+      </linearGradient>
+      <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.14)" stroke-width="1" />
+      </pattern>
+    </defs>
+    <rect width="720" height="720" rx="80" fill="url(#bg)" />
+    <rect width="720" height="720" rx="80" fill="url(#grid)" />
+    <circle cx="360" cy="260" r="124" fill="rgba(255,255,255,0.12)" />
+    <text x="360" y="410" text-anchor="middle" fill="#fffaf2" font-size="250" font-family="Georgia, Times New Roman, serif" font-weight="700">RG</text>
+    <text x="360" y="560" text-anchor="middle" fill="rgba(255,250,242,0.86)" font-size="38" font-family="Arial, sans-serif" letter-spacing="10">AI RESEARCH</text>
+  </svg>
+`.trim());
+
 export const profile = {
   fullName: 'Riya Goyal',
-  shortName: 'Riya',
-  role: 'PhD Student in Computer Science',
-  university: 'Stanford University',
-  location: 'Stanford, California',
-  email: 'riya.goyal@stanford.edu',
-  office: 'Gates Computer Science Building',
-  advisor: 'Prof. John Smith',
-  profilePhoto: 'https://via.placeholder.com/300x300?text=Riya+Goyal',
+  shortName: 'RG',
+  role: 'AI Researcher and UGC NET-JRF Qualified Scholar',
+  headline: 'M.Tech in Computer Science and Engineering (Artificial Intelligence)',
+  affiliation: 'Indira Gandhi Delhi Technical University for Women',
+  location: 'Punhana, Haryana, India',
+  email: 'riya.goyal2599@gmail.com',
+  phone: '+91 9034285780',
+  linkedin: 'https://www.linkedin.com/in/riya-goyal-299642194/',
+  github: 'https://github.com/riya2599',
+  baseUrl: 'https://riya2599.github.io',
+  profilePhoto: `data:image/svg+xml;charset=UTF-8,${monogramSvg}`,
   heroStatement:
-    'Building intelligent systems that understand and adapt to human behavior. Passionate about machine learning, human-computer interaction, and responsible AI design.',
-  focusAreas: ['Machine Learning', 'Human-AI Interaction', 'Adaptive Systems'],
-  
+    'Applied machine learning researcher with work spanning natural language processing, deep learning, cybercrime analytics, and clinical prediction. I build practical AI systems and study how model choices affect accuracy, interpretability, and real-world usefulness.',
+  focusAreas: [
+    'Natural Language Processing',
+    'Deep Learning',
+    'Applied Machine Learning',
+    'Cybersecurity Analytics'
+  ],
+  heroBadges: [
+    'UGC NET-JRF qualified',
+    'M.Tech in CSE-AI',
+    'Published researcher',
+    'Research internship experience'
+  ],
+  heroFacts: [
+    { value: '2', label: 'peer-reviewed publications' },
+    { value: '6', label: 'major academic projects' },
+    { value: '2', label: 'research and AI internships' },
+    { value: '2023', label: 'UGC NET-JRF qualification' }
+  ],
   metrics: [
-    { label: 'Publications', value: '7', icon: 'fa-book-open' },
-    { label: 'Conference Presentations', value: '12', icon: 'fa-presentation' },
-    { label: 'Awards & Recognition', value: '5', icon: 'fa-trophy' },
-    { label: 'Open Source Contributions', value: '20+', icon: 'fa-code-branch' }
+    { label: 'Publications', value: '2', icon: 'fa-file-lines' },
+    { label: 'Research Projects', value: '6', icon: 'fa-diagram-project' },
+    { label: 'Academic Distinctions', value: '4+', icon: 'fa-award' },
+    { label: 'Core Focus Areas', value: '4', icon: 'fa-flask' }
   ],
-
-  education: [
-    {
-      degree: 'PhD in Computer Science',
-      institution: 'Stanford University',
-      year: '2024–Present',
-      focus: 'Machine Learning & HCI',
-      advisor: 'Prof. John Smith'
-    },
-    {
-      degree: 'B.Tech in Computer Science',
-      institution: 'Indian Institute of Technology, Delhi',
-      year: '2020–2024',
-      gpa: '3.95/4.0',
-      honors: 'Summa Cum Laude'
-    }
-  ],
-
   highlights: [
     {
       icon: 'fa-brain',
-      title: 'Novel ML Research',
+      title: 'Research Depth in AI',
       description:
-        'Developing adaptive learning algorithms that improve user engagement and system performance through intelligent feedback mechanisms.'
+        'Published work in cybercrime classification and depression detection, supported by hands-on experimentation with embeddings, classifiers, and ensemble methods.'
     },
     {
-      icon: 'fa-code',
-      title: 'Technical Leadership',
+      icon: 'fa-laptop-code',
+      title: 'Built Across the Stack',
       description:
-        'Led development of open-source frameworks used by 500+ developers worldwide. Contributed to major ML libraries including TensorFlow and PyTorch.'
+        'Delivered projects in web systems, student management, image classification, and healthcare prediction using Python, JavaScript, CNNs, and classic ML.'
     },
     {
-      icon: 'fa-handshake',
-      title: 'Industry Collaboration',
+      icon: 'fa-user-graduate',
+      title: 'Strong Academic Record',
       description:
-        'Interned at major tech companies including Google Brain and Meta AI. Published joint research with industry partners.'
+        'Completed an M.Tech in CSE-AI with 81.41% and a B.Tech in CSE with 90.70%, reflecting both research orientation and technical consistency.'
+    },
+    {
+      icon: 'fa-lightbulb',
+      title: 'Research-to-Application Mindset',
+      description:
+        'Works on socially relevant AI topics such as mental health analysis, malware classification, and predictive healthcare with a bias toward practical deployment.'
     }
   ],
-
+  biography: [
+    'Riya Goyal is an early-career AI researcher focused on building dependable machine learning systems for text, image, and structured data. Her work sits at the intersection of natural language processing, deep learning, and application-driven research.',
+    'She completed her M.Tech in Computer Science and Engineering with a specialization in Artificial Intelligence from IGDTUW after earning a B.Tech in Computer Science from Bhagwan Parshuram Institute of Technology, GGSIPU. Her academic path combines strong scores with research exposure through internships, publications, and project-led exploration.',
+    'Her research portfolio includes cybercrime classification, depression detection through word and sentence embeddings, malware image classification, and predictive models for healthcare. She is particularly interested in how model architecture and feature representation influence performance on socially meaningful problems.'
+  ],
+  aboutSections: [
+    {
+      title: 'Research direction',
+      description:
+        'Riya is interested in applied AI problems where careful modeling decisions can create measurable improvements in accuracy, robustness, and interpretability. Her current body of work reflects a preference for domains where machine learning can support human decision-making in high-impact settings.'
+    },
+    {
+      title: 'Methodological strengths',
+      description:
+        'Her projects combine classical machine learning, neural architectures, and empirical comparison. She has worked with logistic regression, SVMs, CNNs, word embeddings, sentence embeddings, and ensemble learning pipelines.'
+    },
+    {
+      title: 'Professional orientation',
+      description:
+        'With UGC NET-JRF qualification and research internship experience, she is positioning herself for deeper work in AI research, advanced study, and collaborative projects that connect experimentation with real-world utility.'
+    }
+  ],
+  researchInterests: [
+    {
+      icon: 'fa-comments',
+      title: 'NLP for wellbeing and classification',
+      description:
+        'Text classification, embedding analysis, and model comparison for socially relevant language understanding tasks.'
+    },
+    {
+      icon: 'fa-shield-halved',
+      title: 'Cybercrime and malware analytics',
+      description:
+        'ML and deep learning approaches for cybercrime classification and image-based malware detection.'
+    },
+    {
+      icon: 'fa-heart-pulse',
+      title: 'Predictive healthcare models',
+      description:
+        'Structured-data modeling for disease prediction and decision support using interpretable ML baselines.'
+    },
+    {
+      icon: 'fa-microchip',
+      title: 'Deep learning evaluation',
+      description:
+        'Benchmarking architectures and embeddings to understand where representation choices improve downstream performance.'
+    }
+  ],
+  publicationIntro:
+    'The current publication record shows a clear trajectory toward applied AI research, especially in text analytics and cybersecurity-oriented classification. Each paper reflects comparative experimentation and problem-focused modeling.',
+  researchThemes: [
+    {
+      icon: 'fa-language',
+      title: 'Representation learning for text',
+      description:
+        'Comparing word- and sentence-level embeddings to understand their effect on depression detection performance.'
+    },
+    {
+      icon: 'fa-layer-group',
+      title: 'Ensemble learning for difficult classes',
+      description:
+        'Using combined learners to improve classification quality for cybercrime-related datasets.'
+    },
+    {
+      icon: 'fa-bug-slash',
+      title: 'Deep learning for security',
+      description:
+        'Treating malware as an image recognition problem to benchmark modern DL architectures against prior methods.'
+    }
+  ],
   publications: [
     {
-      year: '2024',
-      title: 'Contextual Adaptation in Large Language Models',
-      venue: 'NeurIPS 2024 (Accepted)',
-      type: 'conference'
-    },
-    {
-      year: '2024',
-      title: 'User-Centric Design for AI Systems: A Framework',
-      venue: 'CHI 2024 (Accepted)',
-      type: 'conference'
-    },
-    {
       year: '2023',
-      title: 'Efficient Fine-tuning of Neural Networks',
-      venue: 'ICML 2023',
-      type: 'conference'
-    },
-    {
-      year: '2023',
-      title: 'Understanding Representation Learning in Deep Networks',
-      venue: 'Journal of Machine Learning Research',
-      type: 'journal'
-    },
-    {
-      year: '2023',
-      title: 'Interactive Machine Learning for Better User Control',
-      venue: 'IUI 2023',
-      type: 'conference'
+      type: 'Journal',
+      title: 'Depression Detection Model Using Word and Sentence Embedding with Different Classifiers',
+      authors: 'KM Ankita Rai, Riya Goyal, and Monika Choudhary',
+      venue: 'DOI indexed publication',
+      doi: '10.33564/IJEAST.2023.v08i02.003',
+      url: 'https://doi.org/10.33564/IJEAST.2023.v08i02.003',
+      summary:
+        'Investigates depression detection through comparative evaluation of word and sentence embeddings across multiple classifiers.'
     },
     {
       year: '2022',
-      title: 'Explainability in Neural Recommender Systems',
-      venue: 'RecSys 2022',
-      type: 'conference'
-    },
-    {
-      year: '2022',
-      title: 'Privacy-Preserving Machine Learning Techniques',
-      venue: 'IEEE S&P 2022',
-      type: 'conference'
+      type: 'Journal',
+      title: 'Ensem_SLDR: Classification of Cybercrime Using Ensemble Learning Technique',
+      authors: 'Hemakshi Pandey, Riya Goyal, Deepali Virmani, and Charu Gupta',
+      venue: 'International Journal of Computer Network and Information Security, 14(1), 81-90',
+      doi: '10.5815/ijcnis.2022.01.07',
+      url: 'https://doi.org/10.5815/ijcnis.2022.01.07',
+      summary:
+        'Presents an ensemble-learning approach for cybercrime classification and compares the proposed method with relevant baselines.'
     }
   ],
-
   projects: [
     {
-      title: 'AdaptiveML Framework',
-      description: 'Open-source Python library for building adaptive machine learning systems. 2.5k+ GitHub stars.',
-      technologies: ['Python', 'TensorFlow', 'PyTorch'],
-      link: '#',
-      impact: 'Used by 500+ developers globally'
+      category: 'NLP Research',
+      title: 'Depression Detection with Embedding-Based Classifiers',
+      description:
+        'Studied how word embeddings and sentence embeddings affect depression detection accuracy across different classification models.',
+      technologies: ['Python', 'NLP', 'Word Embeddings', 'Sentence Embeddings', 'Classification'],
+      impact: 'Mapped representation choices to measurable performance differences.'
     },
     {
-      title: 'Human-AI Interaction Study',
-      description: 'Large-scale study examining how users interact with AI systems and design principles for better UX.',
-      technologies: ['User Research', 'ML', 'HCI'],
-      link: '#',
-      impact: '100+ citations in academic literature'
+      category: 'Deep Learning Security',
+      title: 'Malware Classification Using Deep Learning Approaches',
+      description:
+        'Designed a modified deep learning architecture for image-based malware classification and compared it with reported state-of-the-art approaches.',
+      technologies: ['Deep Learning', 'Image Classification', 'Security Analytics'],
+      impact: 'Framed malware analysis as a high-signal computer vision problem.'
     },
     {
-      title: 'Efficient Neural Architecture Search',
-      description: 'Novel approach to automated machine learning that reduces search time by 70% while maintaining accuracy.',
-      technologies: ['AutoML', 'Optimization', 'Deep Learning'],
-      link: '#',
-      impact: 'Accepted to top-tier venue (NeurIPS)'
+      category: 'Computer Vision',
+      title: 'Fashion MNIST Data Classification',
+      description:
+        'Built a convolutional neural network to identify fashion product categories from grayscale image inputs.',
+      technologies: ['CNN', 'Python', 'Computer Vision'],
+      impact: 'Demonstrated end-to-end model training and evaluation for image recognition.'
     },
     {
-      title: 'Privacy-Aware Recommendation Engine',
-      description: 'Personalized recommendation system that preserves user privacy using federated learning.',
-      technologies: ['Federated Learning', 'Recommendations', 'Privacy'],
-      link: '#',
-      impact: 'Patent filed with Stanford TLO'
+      category: 'Healthcare AI',
+      title: 'Heart Disease Prediction',
+      description:
+        'Implemented heart disease prediction pipelines using logistic regression and SVM to evaluate predictive performance on healthcare data.',
+      technologies: ['Machine Learning', 'Python', 'Logistic Regression', 'SVM'],
+      impact: 'Applied interpretable predictive modeling to a clinically relevant use case.'
+    },
+    {
+      category: 'Web Systems',
+      title: 'Online Examination System',
+      description:
+        'Developed a browser-based examination platform with instant result display and automatic submission on timeout.',
+      technologies: ['HTML', 'CSS', 'JavaScript'],
+      impact: 'Focused on reliable exam workflow and time-bound submission behavior.'
+    },
+    {
+      category: 'Software Application',
+      title: 'Student Management System',
+      description:
+        'Created an application for adding, searching, and managing student and course records through a simple workflow.',
+      technologies: ['Python', 'XAMPP Server'],
+      impact: 'Showed practical backend-oriented problem solving for academic administration tasks.'
     }
   ],
-
-  teaching: [
-    {
-      role: 'Teaching Assistant',
-      course: 'Deep Learning Fundamentals',
-      semesters: ['Winter 2024', 'Fall 2023'],
-      responsibilities: 'Led discussion sections, developed assignments, mentored 40+ students'
-    },
-    {
-      role: 'Tutor',
-      course: 'Machine Learning Foundations',
-      semesters: ['Spring 2024', 'Winter 2024'],
-      responsibilities: 'One-on-one tutoring for 15+ graduate students'
-    }
-  ],
-
-  awards: [
-    {
-      year: '2024',
-      title: 'Stanford Graduate Fellowship',
-      description: 'Prestigious fellowship for exceptional PhD candidates'
-    },
-    {
-      year: '2024',
-      title: 'Best Paper Award',
-      description: 'CHI 2024 Conference - User-Centric Design for AI Systems'
-    },
-    {
-      year: '2023',
-      title: 'Google Ph.D. Fellowship Finalist',
-      description: 'Recognized among top 200 candidates worldwide'
-    },
-    {
-      year: '2023',
-      title: 'Rising Star in AI/ML',
-      description: 'Selected by ACM SIGAI as emerging researcher'
-    },
-    {
-      year: '2020',
-      title: 'IIT Delhi Merit Scholarship',
-      description: 'Full scholarship for exceptional academic achievement'
-    }
-  ],
-
   experiences: [
     {
       role: 'Research Intern',
-      company: 'Google Brain',
-      period: 'Summer 2023',
-      location: 'Mountain View, CA',
-      description: 'Developed novel optimization techniques for neural networks. Results published in ICML 2023.'
+      organization: 'IGDTUW',
+      period: 'Jun 2022 - Jul 2022',
+      location: 'Delhi, India',
+      description:
+        'Worked on a depression detection model using word and sentence embeddings with different classifiers in a focused research setting.',
+      highlights: [
+        'Compared multiple representation strategies for text-based mental health detection.',
+        'Contributed to a study that later resulted in a DOI-indexed publication.',
+        'Built empirical intuition around model selection for NLP classification tasks.'
+      ]
     },
     {
-      role: 'Research Intern',
-      company: 'Meta AI (FAIR)',
-      period: 'Summer 2022',
-      location: 'Menlo Park, CA',
-      description: 'Worked on large-scale language models and interpretability. Contributed to Meta AI open-source projects.'
-    },
-    {
-      role: 'Software Engineer Intern',
-      company: 'Microsoft Research',
-      period: 'Summer 2021',
-      location: 'Redmond, WA',
-      description: 'Developed machine learning tools and contributed to internal ML platform.'
+      role: 'Artificial Intelligence Intern',
+      organization: 'Personifwy',
+      period: 'Feb 2022 - May 2022',
+      location: 'Remote',
+      description:
+        'Built and evaluated AI prototypes across object recognition, handwritten digit classification, and news categorization tasks.',
+      highlights: [
+        'Worked with CNN-based vision pipelines for object and digit recognition.',
+        'Explored NLP workflows for news classification.',
+        'Strengthened implementation skills across multiple AI problem types.'
+      ]
     }
   ],
-
-  skills: {
-    languages: ['Python', 'C++', 'JavaScript', 'SQL'],
-    frameworks: ['TensorFlow', 'PyTorch', 'JAX', 'Keras'],
-    tools: ['Git', 'Docker', 'Kubernetes', 'AWS', 'GCP'],
-    research: ['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'HCI', 'Statistics']
-  },
-
-  socialLinks: [
-    { icon: 'fa-google', label: 'Google Scholar', url: '#' },
-    { icon: 'fa-github', label: 'GitHub', url: '#' },
-    { icon: 'fa-linkedin-in', label: 'LinkedIn', url: '#' },
-    { icon: 'fa-twitter', label: 'Twitter', url: '#' },
-    { icon: 'fa-file-pdf', label: 'Resume', url: '#' }
+  education: [
+    {
+      degree: 'M.Tech in Computer Science and Engineering - Artificial Intelligence',
+      institution: 'Indira Gandhi Delhi Technical University for Women',
+      year: '2023',
+      score: '81.41%',
+      focus: 'Artificial Intelligence, machine learning, and applied research',
+      notes: 'Advanced study centered on AI methods and research-oriented problem solving.'
+    },
+    {
+      degree: 'B.Tech in Computer Science and Engineering',
+      institution: 'Bhagwan Parshuram Institute of Technology, GGSIPU',
+      year: '2021',
+      score: '90.70%',
+      focus: 'Computer science fundamentals with strong academic performance',
+      notes: 'Developed a strong base in programming, systems, theory, and software development.'
+    },
+    {
+      degree: 'Senior Secondary (Class 12)',
+      institution: 'S.D.V.N. Sr. Sec. School, CBSE',
+      year: '2016',
+      score: '87.80%',
+      notes: 'Built the academic foundation that led into engineering studies.'
+    },
+    {
+      degree: 'Secondary (Class 10)',
+      institution: 'S.D.V.N. Sr. Sec. School, CBSE',
+      year: '2014',
+      score: 'CGPA 10',
+      notes: 'Strong early academic performance.'
+    }
   ],
-
-  cvUrl: '#',
-  resumeUrl: '#'
+  awards: [
+    {
+      year: '2023',
+      title: 'Qualified UGC NET-JRF',
+      description: 'Cleared the UGC NET-JRF examination in December 2023, marking national-level research eligibility.'
+    },
+    {
+      year: '2021',
+      title: 'Qualified GATE',
+      description: 'Qualified the Graduate Aptitude Test in Engineering, demonstrating strong grounding in core CS concepts.'
+    },
+    {
+      year: '2022',
+      title: 'Research Publication Record',
+      description: 'Built a peer-reviewed publication track in applied AI across cybercrime and mental health text analysis.'
+    },
+    {
+      year: '2021',
+      title: 'High Distinction in B.Tech',
+      description: 'Graduated with 90.70% in Computer Science and Engineering.'
+    }
+  ],
+  credentials: [
+    {
+      icon: 'fa-certificate',
+      title: 'Core Java Certification',
+      issuer: 'Internshala',
+      year: 'Credential',
+      description: 'Formal training in Java fundamentals, syntax, and programming practice.'
+    },
+    {
+      icon: 'fa-certificate',
+      title: 'Python Certification',
+      issuer: 'Udemy',
+      year: 'Credential',
+      description: 'Extended hands-on fluency in Python for software development and machine learning workflows.'
+    },
+    {
+      icon: 'fa-users',
+      title: 'Annual Sports Day Coordinator',
+      issuer: 'Campus leadership',
+      year: 'Activity',
+      description: 'Coordinated an annual campus event, demonstrating organization, teamwork, and execution capability.'
+    }
+  ],
+  academicActivities: [
+    'Participation certificate - NCAT',
+    'Participation certificate - Eloquence 2018',
+    'Participation certificate - Eloquence 2019',
+    'Consistent project work across AI, web, and academic software systems'
+  ],
+  skillGroups: [
+    {
+      title: 'Programming Languages',
+      icon: 'fa-code',
+      items: ['Python', 'C', 'C++', 'Core Java', 'JavaScript']
+    },
+    {
+      title: 'AI and Research Areas',
+      icon: 'fa-brain',
+      items: ['Machine Learning', 'Deep Learning', 'Natural Language Processing', 'Convolutional Neural Networks', 'Ensemble Learning']
+    },
+    {
+      title: 'Databases and Web',
+      icon: 'fa-database',
+      items: ['Oracle SQL', 'RDBMS', 'HTML', 'CSS']
+    },
+    {
+      title: 'Platforms and Tools',
+      icon: 'fa-screwdriver-wrench',
+      items: ['VS Code', 'NetBeans', 'XAMPP Server', 'Windows']
+    },
+    {
+      title: 'Core CS Foundations',
+      icon: 'fa-network-wired',
+      items: ['Operating Systems', 'Compilers', 'Theory of Computation', 'DBMS']
+    }
+  ],
+  professionalStrengths: ['Problem solving', 'Positive team contribution', 'Time management', 'Adaptability'],
+  collaborationNote:
+    'Riya is open to conversations around AI research, advanced study, research internships, and technically grounded collaborations in machine learning and NLP.',
+  socialLinks: [
+    { iconSet: 'fa-brands', icon: 'fa-github', label: 'GitHub', url: 'https://github.com/riya2599' },
+    { iconSet: 'fa-brands', icon: 'fa-linkedin-in', label: 'LinkedIn', url: 'https://www.linkedin.com/in/riya-goyal-299642194/' },
+    { iconSet: 'fa-solid', icon: 'fa-envelope', label: 'Email', url: 'mailto:riya.goyal2599@gmail.com' },
+    { iconSet: 'fa-solid', icon: 'fa-file-pdf', label: 'Resume', url: '/Riya_Goyal-1.pdf' }
+  ],
+  cvUrl: '/Riya_Goyal-1.pdf',
+  resumeUrl: '/Riya_Goyal-1.pdf'
 };
