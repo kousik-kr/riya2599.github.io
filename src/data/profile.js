@@ -1,220 +1,247 @@
 export const profile = {
   fullName: 'Riya Goyal',
   shortName: 'Riya',
-  role: 'PhD Student in Computer Science',
-  university: 'Stanford University',
-  location: 'Stanford, California',
-  email: 'riya.goyal@stanford.edu',
-  office: 'Gates Computer Science Building',
-  advisor: 'Prof. John Smith',
-  profilePhoto: 'https://via.placeholder.com/300x300?text=Riya+Goyal',
+  initials: 'RG',
+  role: 'Second-Year PhD Research Scholar',
+  university: 'Indian Institute of Technology Ropar',
+  department: 'Department of Computer Science and Engineering',
+  location: 'Rupnagar, Punjab, India',
+  email: 'riya.goyal2599@gmail.com',
+  office: 'Department of Computer Science and Engineering, IIT Ropar',
+  advisor: '',
+  profilePhoto: '',
+  heroVisual: './assets/medical-imaging-robustness.png',
+  cvUrl: './docs/Riya_Goyal-1.pdf',
+  resumeUrl: './docs/Riya_Goyal-1.pdf',
+  linkedinUrl: 'https://www.linkedin.com/in/riya-goyal-299642194/',
+  githubUrl: 'https://github.com/riya2599',
+  heroKicker: 'Medical Imaging Security | Robust AI',
+  researchTheme: 'Adversarial attacks on medical images',
   heroStatement:
-    'Building intelligent systems that understand and adapt to human behavior. Passionate about machine learning, human-computer interaction, and responsible AI design.',
-  focusAreas: ['Machine Learning', 'Human-AI Interaction', 'Adaptive Systems'],
-  
+    'Riya is a second-year PhD student at IIT Ropar studying how adversarial perturbations can expose, evaluate, and strengthen AI systems for medical image analysis.',
+  focusAreas: [
+    'Adversarial Machine Learning',
+    'Medical Image Analysis',
+    'Robust Deep Learning',
+    'Computer Vision'
+  ],
+
+  quickFacts: [
+    { label: 'Current stage', value: 'PhD Year 2' },
+    { label: 'Research domain', value: 'Adversarial attacks on medical images' },
+    { label: 'Institute', value: 'IIT Ropar' },
+    { label: 'National eligibility', value: 'UGC NET-JRF' }
+  ],
+
   metrics: [
-    { label: 'Publications', value: '7', icon: 'fa-book-open' },
-    { label: 'Conference Presentations', value: '12', icon: 'fa-presentation' },
-    { label: 'Awards & Recognition', value: '5', icon: 'fa-trophy' },
-    { label: 'Open Source Contributions', value: '20+', icon: 'fa-code-branch' }
+    { label: 'Peer-reviewed publications', value: '2', icon: 'fa-book-medical' },
+    { label: 'AI/ML research projects', value: '6+', icon: 'fa-diagram-project' },
+    { label: 'National exams qualified', value: '2', icon: 'fa-award' },
+    { label: 'Current research area', value: 'Robust AI', icon: 'fa-shield-halved' }
   ],
 
   education: [
     {
-      degree: 'PhD in Computer Science',
-      institution: 'Stanford University',
-      year: '2024–Present',
-      focus: 'Machine Learning & HCI',
-      advisor: 'Prof. John Smith'
+      degree: 'PhD in Computer Science and Engineering',
+      institution: 'Indian Institute of Technology Ropar',
+      year: 'Ongoing',
+      focus: 'Adversarial attacks on medical images and robust medical AI'
     },
     {
-      degree: 'B.Tech in Computer Science',
-      institution: 'Indian Institute of Technology, Delhi',
-      year: '2020–2024',
-      gpa: '3.95/4.0',
-      honors: 'Summa Cum Laude'
+      degree: 'M.Tech in Computer Science and Engineering - Artificial Intelligence',
+      institution: 'Indira Gandhi Delhi Technical University for Women',
+      year: '2023',
+      gpa: '81.41%',
+      honors: 'Specialization in AI'
+    },
+    {
+      degree: 'B.Tech in Computer Science and Engineering',
+      institution: 'Bhagwan Parshuram Institute of Technology, GGSIPU',
+      year: '2021',
+      gpa: '90.70%'
     }
   ],
 
   highlights: [
     {
-      icon: 'fa-brain',
-      title: 'Novel ML Research',
+      icon: 'fa-shield-heart',
+      title: 'Robustness for Clinical AI',
       description:
-        'Developing adaptive learning algorithms that improve user engagement and system performance through intelligent feedback mechanisms.'
+        'Explores adversarial behavior in medical image models so diagnostic AI can be evaluated with a stronger safety and reliability lens.'
     },
     {
-      icon: 'fa-code',
-      title: 'Technical Leadership',
+      icon: 'fa-x-ray',
+      title: 'Medical Imaging Focus',
       description:
-        'Led development of open-source frameworks used by 500+ developers worldwide. Contributed to major ML libraries including TensorFlow and PyTorch.'
+        'Builds on computer vision and deep learning foundations to study how small image perturbations can influence model predictions.'
     },
     {
-      icon: 'fa-handshake',
-      title: 'Industry Collaboration',
+      icon: 'fa-layer-group',
+      title: 'Broad AI Foundation',
       description:
-        'Interned at major tech companies including Google Brain and Meta AI. Published joint research with industry partners.'
+        'Brings prior work across NLP, CNN-based image classification, malware classification, and classical machine learning projects.'
     }
   ],
 
   publications: [
     {
-      year: '2024',
-      title: 'Contextual Adaptation in Large Language Models',
-      venue: 'NeurIPS 2024 (Accepted)',
-      type: 'conference'
-    },
-    {
-      year: '2024',
-      title: 'User-Centric Design for AI Systems: A Framework',
-      venue: 'CHI 2024 (Accepted)',
-      type: 'conference'
-    },
-    {
       year: '2023',
-      title: 'Efficient Fine-tuning of Neural Networks',
-      venue: 'ICML 2023',
-      type: 'conference'
-    },
-    {
-      year: '2023',
-      title: 'Understanding Representation Learning in Deep Networks',
-      venue: 'Journal of Machine Learning Research',
+      title: 'Depression Detection Model Using Word and Sentence Embedding with Different Classifiers',
+      authors: 'K. M. Ankita Rai, Riya Goyal, Monika Choudhary',
+      venue: 'IJEAST, Vol. 8, Issue 2',
+      doi: '10.33564/IJEAST.2023.v08i02.003',
       type: 'journal'
     },
     {
-      year: '2023',
-      title: 'Interactive Machine Learning for Better User Control',
-      venue: 'IUI 2023',
-      type: 'conference'
-    },
-    {
       year: '2022',
-      title: 'Explainability in Neural Recommender Systems',
-      venue: 'RecSys 2022',
-      type: 'conference'
-    },
-    {
-      year: '2022',
-      title: 'Privacy-Preserving Machine Learning Techniques',
-      venue: 'IEEE S&P 2022',
-      type: 'conference'
+      title: 'Ensem_SLDR: Classification of Cybercrime Using Ensemble Learning Technique',
+      authors: 'Hemakshi Pandey, Riya Goyal, Deepali Virmani, Charu Gupta',
+      venue: 'International Journal of Computer Network and Information Security, Vol. 14, No. 1, pp. 81-90',
+      doi: '10.5815/ijcnis.2022.01.07',
+      type: 'journal'
     }
   ],
 
   projects: [
     {
-      title: 'AdaptiveML Framework',
-      description: 'Open-source Python library for building adaptive machine learning systems. 2.5k+ GitHub stars.',
-      technologies: ['Python', 'TensorFlow', 'PyTorch'],
-      link: '#',
-      impact: 'Used by 500+ developers globally'
+      title: 'Adversarial Attacks on Medical Images',
+      description:
+        'Current doctoral research direction focused on evaluating the vulnerability of medical image models to carefully crafted perturbations and improving trust in AI-assisted diagnosis.',
+      technologies: ['Adversarial ML', 'Medical Imaging', 'Deep Learning', 'Computer Vision'],
+      link: '',
+      impact: 'Current PhD research at IIT Ropar'
     },
     {
-      title: 'Human-AI Interaction Study',
-      description: 'Large-scale study examining how users interact with AI systems and design principles for better UX.',
-      technologies: ['User Research', 'ML', 'HCI'],
-      link: '#',
-      impact: '100+ citations in academic literature'
+      title: 'Malware Classification Using Deep Learning Approaches',
+      description:
+        'Proposed a modified deep learning architecture for image-based malware classification and compared its behavior against state-of-the-art approaches.',
+      technologies: ['Deep Learning', 'Image Classification', 'Cybersecurity'],
+      link: '',
+      impact: 'Connected visual representation learning with security analytics'
     },
     {
-      title: 'Efficient Neural Architecture Search',
-      description: 'Novel approach to automated machine learning that reduces search time by 70% while maintaining accuracy.',
-      technologies: ['AutoML', 'Optimization', 'Deep Learning'],
-      link: '#',
-      impact: 'Accepted to top-tier venue (NeurIPS)'
+      title: 'Depression Detection with Word and Sentence Embeddings',
+      description:
+        'Built and evaluated models using word and sentence embeddings with different classifiers to study depression detection from text.',
+      technologies: ['NLP', 'Machine Learning', 'Embeddings'],
+      link: '',
+      impact: 'Led to a peer-reviewed publication'
     },
     {
-      title: 'Privacy-Aware Recommendation Engine',
-      description: 'Personalized recommendation system that preserves user privacy using federated learning.',
-      technologies: ['Federated Learning', 'Recommendations', 'Privacy'],
-      link: '#',
-      impact: 'Patent filed with Stanford TLO'
+      title: 'Medical Risk Prediction with Classical ML',
+      description:
+        'Developed a heart disease prediction workflow using Python, logistic regression, and support vector machines.',
+      technologies: ['Python', 'Logistic Regression', 'SVM'],
+      link: '',
+      impact: 'Strengthened applied ML foundations in healthcare analytics'
+    },
+    {
+      title: 'Fashion MNIST Classification',
+      description:
+        'Trained convolutional neural networks to classify image categories in Fashion MNIST and study visual feature learning.',
+      technologies: ['CNN', 'Computer Vision', 'Python'],
+      link: '',
+      impact: 'Foundation project for image-based deep learning'
     }
   ],
 
   teaching: [
     {
-      role: 'Teaching Assistant',
-      course: 'Deep Learning Fundamentals',
-      semesters: ['Winter 2024', 'Fall 2023'],
-      responsibilities: 'Led discussion sections, developed assignments, mentored 40+ students'
+      role: 'Teaching Interests',
+      course: 'Machine Learning, Deep Learning, and Computer Vision',
+      semesters: ['Current'],
+      responsibilities:
+        'Interested in mentoring students on robust ML, applied computer vision, and reproducible experimentation.'
     },
     {
-      role: 'Tutor',
-      course: 'Machine Learning Foundations',
-      semesters: ['Spring 2024', 'Winter 2024'],
-      responsibilities: 'One-on-one tutoring for 15+ graduate students'
+      role: 'Academic Service',
+      course: 'Student coordination and campus activities',
+      semesters: ['Certified'],
+      responsibilities:
+        'Recognized for coordination during Annual Sports Day and participation in communication-focused campus events.'
     }
   ],
 
   awards: [
     {
-      year: '2024',
-      title: 'Stanford Graduate Fellowship',
-      description: 'Prestigious fellowship for exceptional PhD candidates'
+      year: '2023',
+      title: 'UGC NET-JRF Qualified',
+      description:
+        'Qualified the December 2023 UGC NET-JRF examination for research eligibility and fellowship support.'
     },
     {
-      year: '2024',
-      title: 'Best Paper Award',
-      description: 'CHI 2024 Conference - User-Centric Design for AI Systems'
+      year: '2021',
+      title: 'GATE Qualified',
+      description:
+        'Qualified the Graduate Aptitude Test in Engineering, a national-level examination for engineering research and higher studies.'
     },
     {
       year: '2023',
-      title: 'Google Ph.D. Fellowship Finalist',
-      description: 'Recognized among top 200 candidates worldwide'
+      title: 'M.Tech Academic Performance',
+      description: 'Completed M.Tech in CSE-AI at IGDTUW with 81.41%.'
     },
     {
-      year: '2023',
-      title: 'Rising Star in AI/ML',
-      description: 'Selected by ACM SIGAI as emerging researcher'
+      year: '2021',
+      title: 'B.Tech Academic Performance',
+      description: 'Completed B.Tech in CSE at BPIT, GGSIPU with 90.70%.'
     },
     {
-      year: '2020',
-      title: 'IIT Delhi Merit Scholarship',
-      description: 'Full scholarship for exceptional academic achievement'
+      year: 'Certifications',
+      title: 'Python and Core Java',
+      description: 'Certified in Python from Udemy and Core Java from Internshala.'
     }
   ],
 
   experiences: [
     {
-      role: 'Research Intern',
-      company: 'Google Brain',
-      period: 'Summer 2023',
-      location: 'Mountain View, CA',
-      description: 'Developed novel optimization techniques for neural networks. Results published in ICML 2023.'
+      role: 'PhD Research Scholar',
+      company: 'Indian Institute of Technology Ropar',
+      period: 'Current',
+      location: 'Rupnagar, Punjab, India',
+      description:
+        'Researching adversarial attacks on medical images with a focus on robust and trustworthy deep learning for healthcare-oriented computer vision.'
     },
     {
       role: 'Research Intern',
-      company: 'Meta AI (FAIR)',
-      period: 'Summer 2022',
-      location: 'Menlo Park, CA',
-      description: 'Worked on large-scale language models and interpretability. Contributed to Meta AI open-source projects.'
+      company: 'IGDTUW',
+      period: 'June 2022 - July 2022',
+      location: 'Delhi, India',
+      description:
+        'Worked on a depression detection model using word and sentence embeddings with multiple classifiers.'
     },
     {
-      role: 'Software Engineer Intern',
-      company: 'Microsoft Research',
-      period: 'Summer 2021',
-      location: 'Redmond, WA',
-      description: 'Developed machine learning tools and contributed to internal ML platform.'
+      role: 'Artificial Intelligence Intern',
+      company: 'Personifwy',
+      period: 'February 2022 - May 2022',
+      location: 'India',
+      description:
+        'Built AI projects including object recognition with CNNs, handwritten digit classification, and news classification with NLP.'
     }
   ],
 
   skills: {
-    languages: ['Python', 'C++', 'JavaScript', 'SQL'],
-    frameworks: ['TensorFlow', 'PyTorch', 'JAX', 'Keras'],
-    tools: ['Git', 'Docker', 'Kubernetes', 'AWS', 'GCP'],
-    research: ['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'HCI', 'Statistics']
+    languages: ['Python', 'C', 'C++', 'Core Java', 'JavaScript'],
+    frameworks: ['PyTorch', 'TensorFlow/Keras', 'scikit-learn', 'CNNs', 'NLP embeddings'],
+    tools: ['Git', 'VS Code', 'NetBeans', 'Oracle SQL', 'XAMPP'],
+    research: [
+      'Adversarial Machine Learning',
+      'Medical Image Analysis',
+      'Deep Learning',
+      'Computer Vision',
+      'NLP',
+      'Cybersecurity ML'
+    ]
   },
 
   socialLinks: [
-    { icon: 'fa-google', label: 'Google Scholar', url: '#' },
-    { icon: 'fa-github', label: 'GitHub', url: '#' },
-    { icon: 'fa-linkedin-in', label: 'LinkedIn', url: '#' },
-    { icon: 'fa-twitter', label: 'Twitter', url: '#' },
-    { icon: 'fa-file-pdf', label: 'Resume', url: '#' }
-  ],
-
-  cvUrl: '#',
-  resumeUrl: '#'
+    { icon: 'fa-github', iconStyle: 'fa-brands', label: 'GitHub', url: 'https://github.com/riya2599' },
+    {
+      icon: 'fa-linkedin-in',
+      iconStyle: 'fa-brands',
+      label: 'LinkedIn',
+      url: 'https://www.linkedin.com/in/riya-goyal-299642194/'
+    },
+    { icon: 'fa-envelope', iconStyle: 'fa-solid', label: 'Email', url: 'mailto:riya.goyal2599@gmail.com' },
+    { icon: 'fa-file-pdf', iconStyle: 'fa-solid', label: 'CV', url: './docs/Riya_Goyal-1.pdf' }
+  ]
 };

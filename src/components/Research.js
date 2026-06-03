@@ -6,7 +6,7 @@ export const createResearch = ({ publications }) =>
       <div class="section-heading">
         <p class="eyebrow">Research</p>
         <h2>Publications</h2>
-        <p class="section-subtitle">Peer-reviewed work in machine learning and human-AI interaction</p>
+        <p class="section-subtitle">Peer-reviewed contributions in adversarial ML and cybersecurity</p>
       </div>
       <div class="publications-list">
         ${createList(
@@ -18,7 +18,9 @@ export const createResearch = ({ publications }) =>
                 <span class="pub-type">${pub.type === 'conference' ? 'Conference' : 'Journal'}</span>
               </div>
               <h3>${pub.title}</h3>
+              <p class="authors"><i class="fa-solid fa-users"></i> ${pub.authors}</p>
               <p class="venue"><i class="fa-solid fa-book"></i> ${pub.venue}</p>
+              ${pub.doi ? `<p class="doi"><i class="fa-solid fa-link"></i> DOI: ${pub.doi}</p>` : ''}
             </article>
           `
         )}

@@ -1,83 +1,66 @@
 import { createElementFromHTML } from '../utils/dom.js';
 
-export const createContact = ({ fullName, email, office, university, location }) =>
+export const createContact = ({ fullName, email, office, university, location, linkedinUrl, githubUrl, socialLinks }) =>
   createElementFromHTML(`
     <main class="page-content">
       <section class="contact-hero glass-panel">
         <h1>Get in Touch</h1>
         <p class="contact-intro">
-          I'm always interested in hearing about new research collaborations, speaking opportunities, 
-          or just connecting with people passionate about AI and human-computer interaction.
+          I'm interested in discussing research collaborations, adversarial robustness in medical AI, 
+          and opportunities to contribute to trustworthy AI systems. Feel free to reach out.
         </p>
       </section>
 
       <div class="contact-container">
         <section class="contact-methods glass-panel">
-          <h2>Contact Information</h2>
+          <h2><i class="fa-solid fa-address-card"></i> Contact Information</h2>
           
           <div class="contact-method">
             <h3><i class="fa-solid fa-envelope"></i> Email</h3>
             <p>
               <a href="mailto:${email}">${email}</a>
             </p>
-            <p class="contact-note">I typically respond within 48 hours</p>
+            <p class="contact-note">I typically respond within 2-3 business days</p>
           </div>
 
           <div class="contact-method">
-            <h3><i class="fa-solid fa-map-pin"></i> Office</h3>
+            <h3><i class="fa-solid fa-map-pin"></i> Office Location</h3>
             <p>${office}</p>
-            <p>${university}</p>
+            <p><strong>${university}</strong></p>
             <p>${location}</p>
           </div>
 
           <div class="contact-method">
-            <h3><i class="fa-solid fa-calendar"></i> Schedule a Meeting</h3>
-            <p>
-              For research discussions, collaborations, or mentorship,
-              <a href="#" class="contact-link">schedule a meeting</a> with my calendar.
-            </p>
+            <h3><i class="fa-solid fa-link"></i> Connect Online</h3>
+            <div class="social-links-contact">
+              <a href="${linkedinUrl}" target="_blank" rel="noopener noreferrer" class="social-link">
+                <i class="fa-brands fa-linkedin-in"></i> LinkedIn
+              </a>
+              <a href="${githubUrl}" target="_blank" rel="noopener noreferrer" class="social-link">
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+            </div>
           </div>
         </section>
 
-        <section class="contact-form-section glass-panel">
-          <h2>Send a Message</h2>
-          <form class="contact-form" method="POST" action="/api/contact">
-            <div class="form-group">
-              <label for="name">Name *</label>
-              <input type="text" id="name" name="name" required placeholder="Your name" />
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email *</label>
-              <input type="email" id="email" name="email" required placeholder="your@email.com" />
-            </div>
-
-            <div class="form-group">
-              <label for="subject">Subject *</label>
-              <input type="text" id="subject" name="subject" required placeholder="What is this about?" />
-            </div>
-
-            <div class="form-group">
-              <label for="message">Message *</label>
-              <textarea id="message" name="message" required rows="6" placeholder="Tell me more about your inquiry..."></textarea>
-            </div>
-
-            <div class="form-group">
-              <label for="purpose">Purpose of Inquiry</label>
-              <select id="purpose" name="purpose">
-                <option value="">Select...</option>
-                <option value="research">Research Collaboration</option>
-                <option value="speaking">Speaking Opportunity</option>
-                <option value="mentoring">Mentoring / Advice</option>
-                <option value="interview">Interview / Media</option>
-                <option value="general">General Inquiry</option>
-              </select>
-            </div>
-
-            <button type="submit" class="btn-primary">Send Message</button>
-          </form>
+        <section class="contact-research glass-panel">
+          <h2><i class="fa-solid fa-microscope"></i> Research Collaboration</h2>
+          <p>
+            I'm actively seeking collaborations in the following areas:
+          </p>
+          <ul class="collaboration-topics">
+            <li><strong>Adversarial robustness</strong> in medical imaging deep learning models</li>
+            <li><strong>Defense mechanisms</strong> against adversarial attacks in healthcare AI</li>
+            <li><strong>Trustworthiness evaluation</strong> frameworks for clinical decision-support systems</li>
+            <li><strong>Safety-critical applications</strong> of deep learning in medical image analysis</li>
+          </ul>
+          <p class="collaboration-note">
+            If you're working on related problems or interested in discussing AI safety in medical imaging, I'd love to hear from you!
+          </p>
         </section>
       </div>
+    </main>
+  `);
 
       <section class="contact-social glass-panel">
         <h2>Connect Online</h2>
