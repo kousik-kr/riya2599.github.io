@@ -5,7 +5,7 @@ export const createProjects = ({ projects }) =>
     <section id="projects" class="content-section">
       <div class="section-heading">
         <p class="eyebrow">Portfolio</p>
-        <h2>Featured Projects</h2>
+        <h2>Selected Academic Projects</h2>
       </div>
       <div class="projects-grid">
         ${createList(
@@ -14,16 +14,20 @@ export const createProjects = ({ projects }) =>
             <article class="project-card glass-panel">
               <div class="project-header">
                 <h3>${project.title}</h3>
-                <a href="${project.link}" class="project-link" aria-label="View project">
-                  <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                ${
+                  project.link
+                    ? `<a href="${project.link}" class="project-link" aria-label="View ${project.title}">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>`
+                    : ''
+                }
               </div>
               <p class="project-description">${project.description}</p>
               <div class="project-meta">
                 <div class="tech-stack">
                   ${createList(project.technologies, (tech) => `<span class="tech-badge">${tech}</span>`)}
                 </div>
-                <p class="project-impact"><i class="fa-solid fa-star"></i> ${project.impact}</p>
+                <p class="project-impact"><i class="fa-solid fa-circle-info"></i> ${project.impact}</p>
               </div>
             </article>
           `

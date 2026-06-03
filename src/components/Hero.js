@@ -1,32 +1,54 @@
 import { createElementFromHTML, createList } from '../utils/dom.js';
 
-export const createHero = ({ fullName, role, university, location, heroStatement, focusAreas, metrics, heroVisual, department }) =>
+export const createHero = ({
+  fullName,
+  role,
+  university,
+  location,
+  heroStatement,
+  focusAreas,
+  department,
+  heroKicker,
+  heroVisual,
+  quickFacts,
+  cvUrl
+}) =>
   createElementFromHTML(`
-    <section id="home" class="hero section-grid">
-      <div class="hero-visual-container">
-        <img src="${heroVisual}" alt="Medical imaging robustness visualization" class="hero-visual" />
-        <div class="hero-overlay"></div>
-      </div>
-      <div class="hero-content">
-        <h1>${fullName}</h1>
-        <h2>${role}</h2>
-        <p class="hero-meta"><i class="fa-solid fa-building-columns"></i> ${university}</p>
-        <p class="hero-meta"><i class="fa-solid fa-door-open"></i> ${department}</p>
-        <p class="hero-meta-location"><i class="fa-solid fa-map-pin"></i> ${location}</p>
-        <p class="hero-statement">${heroStatement}</p>
-        <div class="focus-tags" aria-label="Research focus areas">
-          ${createList(focusAreas, (area) => `<span class="tag accent-tag"><i class="fa-solid fa-check"></i> ${area}</span>`)}
+    <section id="home" class="hero" style="--hero-image: url('${heroVisual}');">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <p class="eyebrow">${heroKicker}</p>
+          <h1>${fullName}</h1>
+          <h2>${role}</h2>
+          <div class="hero-meta-group" aria-label="Academic affiliation">
+            <p class="hero-meta"><i class="fa-solid fa-building-columns"></i> ${university}</p>
+            <p class="hero-meta"><i class="fa-solid fa-microscope"></i> ${department}</p>
+            <p class="hero-meta"><i class="fa-solid fa-location-dot"></i> ${location}</p>
+          </div>
+          <p class="hero-statement">${heroStatement}</p>
+          <div class="focus-tags" aria-label="Research focus areas">
+            ${createList(focusAreas, (area) => `<span class="tag">${area}</span>`)}
+          </div>
+          <div class="hero-actions">
+            <a href="/research.html" class="btn btn-primary"><i class="fa-solid fa-book-open"></i> Research</a>
+            <a href="${cvUrl}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i> CV</a>
+          </div>
         </div>
-        <div class="hero-actions">
-          <a href="/research.html" class="btn btn-primary"><i class="fa-solid fa-book-open"></i> View Research</a>
-          <a href="/contact.html" class="btn btn-secondary"><i class="fa-solid fa-envelope"></i> Get in Touch</a>
-        </div>
+
+        <aside class="hero-card" aria-label="Research profile">
+          <h3>Research Profile</h3>
+          <ul class="quick-stats">
+            ${createList(
+              quickFacts,
+              (item) => `
+                <li>
+                  <span>${item.label}</span>
+                  <strong>${item.value}</strong>
+                </li>
+              `
+            )}
+          </ul>
+        </aside>
       </div>
-      <aside class="hero-card glass-panel" aria-label="Research metrics">
-        <h3><i class="fa-solid fa-chart-line"></i> Research Profile</h3>
-        <ul class="quick-stats">
-          ${createList(metrics, (metric) => `<li><strong>${metric.value}</strong> ${metric.label}</li>`)}
-        </ul>
-      </aside>
     </section>
   `);

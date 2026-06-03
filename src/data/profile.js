@@ -2,11 +2,11 @@ export const profile = {
   fullName: 'Riya Goyal',
   shortName: 'Riya',
   initials: 'RG',
-  role: 'Second-Year PhD Research Scholar',
+  role: 'PhD Research Scholar',
   university: 'Indian Institute of Technology Ropar',
   department: 'Department of Computer Science and Engineering',
   location: 'Rupnagar, Punjab, India',
-  email: 'riya.goyal2599@gmail.com',
+  email: 'riya.24csz0006@iitropar.ac.in',
   office: 'Department of Computer Science and Engineering, IIT Ropar',
   advisor: '',
   profilePhoto: '',
@@ -18,7 +18,7 @@ export const profile = {
   heroKicker: 'Medical Imaging Security | Robust AI',
   researchTheme: 'Adversarial attacks on medical images',
   heroStatement:
-    'Riya is a second-year PhD student at IIT Ropar studying how adversarial perturbations can expose, evaluate, and strengthen AI systems for medical image analysis.',
+    'Riya is a PhD research scholar at IIT Ropar studying adversarial attacks on medical images, with an emphasis on robust and trustworthy deep learning for healthcare-oriented computer vision.',
   focusAreas: [
     'Adversarial Machine Learning',
     'Medical Image Analysis',
@@ -27,7 +27,7 @@ export const profile = {
   ],
 
   quickFacts: [
-    { label: 'Current stage', value: 'PhD Year 2' },
+    { label: 'Current stage', value: 'PhD Student' },
     { label: 'Research domain', value: 'Adversarial attacks on medical images' },
     { label: 'Institute', value: 'IIT Ropar' },
     { label: 'National eligibility', value: 'UGC NET-JRF' }
@@ -241,7 +241,7 @@ export const profile = {
       label: 'LinkedIn',
       url: 'https://www.linkedin.com/in/riya-goyal-299642194/'
     },
-    { icon: 'fa-envelope', iconStyle: 'fa-solid', label: 'Email', url: 'mailto:riya.goyal2599@gmail.com' },
+    { icon: 'fa-envelope', iconStyle: 'fa-solid', label: 'Email', url: 'mailto:riya.24csz0006@iitropar.ac.in' },
     { icon: 'fa-file-pdf', iconStyle: 'fa-solid', label: 'CV', url: './docs/Riya_Goyal-1.pdf' }
   ]
 };
