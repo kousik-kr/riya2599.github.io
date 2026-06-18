@@ -8,21 +8,33 @@ export const createAbout = ({
   heroStatement,
   focusAreas,
   location,
-  researchTheme
-}) =>
-  createElementFromHTML(`
+  researchTheme,
+  profilePhoto
+}) => {
+  const profileImage = profilePhoto
+    ? `
+      <figure class="about-profile-photo">
+        <img src="${profilePhoto}" alt="${fullName}" />
+      </figure>
+    `
+    : '';
+
+  return createElementFromHTML(`
     <main class="page-content">
       <section class="about-hero glass-panel">
         <div class="about-container">
-          <p class="eyebrow">Academic Profile</p>
-          <h1>${fullName}</h1>
-          <p class="about-subtitle">${role}</p>
-          <p class="about-statement">${heroStatement}</p>
-          <div class="about-meta">
-            <span><i class="fa-solid fa-building-columns"></i> ${university}</span>
-            <span><i class="fa-solid fa-microscope"></i> ${department}</span>
-            <span><i class="fa-solid fa-location-dot"></i> ${location}</span>
+          <div class="about-copy">
+            <p class="eyebrow">Academic Profile</p>
+            <h1>${fullName}</h1>
+            <p class="about-subtitle">${role}</p>
+            <p class="about-statement">${heroStatement}</p>
+            <div class="about-meta">
+              <span><i class="fa-solid fa-building-columns"></i> ${university}</span>
+              <span><i class="fa-solid fa-microscope"></i> ${department}</span>
+              <span><i class="fa-solid fa-location-dot"></i> ${location}</span>
+            </div>
           </div>
+          ${profileImage}
         </div>
       </section>
 
@@ -72,3 +84,4 @@ export const createAbout = ({
       </section>
     </main>
   `);
+};

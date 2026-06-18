@@ -9,10 +9,10 @@ export const profile = {
   email: 'riya.24csz0006@iitropar.ac.in',
   office: 'Department of Computer Science and Engineering, IIT Ropar',
   advisor: '',
-  profilePhoto: '',
-  heroVisual: './assets/medical-imaging-robustness.png',
-  cvUrl: './docs/Riya_Goyal-1.pdf',
-  resumeUrl: './docs/Riya_Goyal-1.pdf',
+  profilePhoto: './assets/profile-photo.jpeg',
+  heroVisual: './assets/medical-adversarial-hero-light.png',
+  cvUrl: './docs/Riya_Goyal.pdf',
+  resumeUrl: './docs/Riya_Goyal.pdf',
   linkedinUrl: 'https://www.linkedin.com/in/riya-goyal-299642194/',
   githubUrl: 'https://github.com/riya2599',
   heroKicker: 'Medical Imaging Security | Robust AI',
@@ -242,6 +242,6 @@ export const profile = {
       url: 'https://www.linkedin.com/in/riya-goyal-299642194/'
     },
     { icon: 'fa-envelope', iconStyle: 'fa-solid', label: 'Email', url: 'mailto:riya.24csz0006@iitropar.ac.in' },
-    { icon: 'fa-file-pdf', iconStyle: 'fa-solid', label: 'CV', url: './docs/Riya_Goyal-1.pdf' }
+    { icon: 'fa-file-pdf', iconStyle: 'fa-solid', label: 'CV', url: './docs/Riya_Goyal.pdf' }
   ]
 };

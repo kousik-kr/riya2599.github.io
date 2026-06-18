@@ -10,7 +10,6 @@ export const createHeader = ({ shortName }) =>
         </a>
         <nav class="nav-links" aria-label="Main navigation">
           <a href="#home">Home</a>
-          <a href="#about">About</a>
           <a href="#research">Research</a>
           <a href="#projects">Projects</a>
           <a href="#education">Education</a>

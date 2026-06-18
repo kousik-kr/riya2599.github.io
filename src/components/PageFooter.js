@@ -21,7 +21,6 @@ export const createPageFooter = ({ fullName, role, email, office, university, lo
           <h3>Navigation</h3>
           <ul class="footer-links">
             <li><a href="/">Home</a></li>
-            <li><a href="/about.html">About</a></li>
             <li><a href="/research.html">Research</a></li>
             <li><a href="/projects.html">Projects</a></li>
             <li><a href="/education.html">Education</a></li>
