@@ -18,6 +18,28 @@ body {
   width: 100%;
   margin-top: 0;
   gap: 1.6rem;
+  position: relative;
+  isolation: isolate;
+}
+
+.home-shell::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: clamp(840px, 115vh, 1100px);
+  background-image:
+    linear-gradient(180deg, rgba(247, 251, 253, 0.12) 0%, rgba(247, 251, 253, 0.45) 56%, rgba(247, 251, 253, 0.98) 100%),
+    var(--home-background);
+  background-position: center top, center top;
+  background-size: cover, cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.home-shell > * {
+  position: relative;
+  z-index: 1;
 }
 
 .home-shell .site-header,
@@ -1059,6 +1081,10 @@ body {
     padding: 4rem 1.2rem;
   }
 
+  .home-shell::before {
+    height: clamp(720px, 96vh, 920px);
+  }
+
   .hero-inner {
     grid-template-columns: 1fr;
   }
@@ -1112,6 +1138,11 @@ body {
 
   .hero {
     padding: 3rem 1rem;
+  }
+
+  .home-shell::before {
+    height: clamp(620px, 86vh, 780px);
+    background-position: center top, 72% top;
   }
 
   .hero h1 {

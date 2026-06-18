@@ -9,9 +9,11 @@ export const createHero = ({
   heroKicker,
   heroVisual,
   cvUrl
-}) =>
-  createElementFromHTML(`
-    <section id="home" class="hero" style="--hero-image: url('${heroVisual}');">
+}) => {
+  const heroImageUrl = new URL(heroVisual, document.baseURI).href;
+
+  return createElementFromHTML(`
+    <section id="home" class="hero" style="--hero-image: url('${heroImageUrl}');">
       <div class="hero-inner">
         <div class="hero-content">
           <p class="eyebrow">${heroKicker}</p>
@@ -32,3 +34,4 @@ export const createHero = ({
       </div>
     </section>
   `);
+};

@@ -15,6 +15,7 @@ const renderHomePage = () => {
 
   const page = document.createElement('div');
   page.className = 'page-shell home-shell';
+  page.style.setProperty('--home-background', `url('${new URL(profile.heroVisual, document.baseURI).href}')`);
 
   page.append(
     createNavigation(profile, 'home'),
