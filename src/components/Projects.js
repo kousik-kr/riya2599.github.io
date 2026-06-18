@@ -7,11 +7,11 @@ export const createProjects = ({ projects }) =>
         <p class="eyebrow">Portfolio</p>
         <h2>Selected Academic Projects</h2>
       </div>
-      <div class="projects-grid">
+      <div class="projects-list">
         ${createList(
           projects,
           (project) => `
-            <article class="project-card glass-panel">
+            <article class="project-item glass-panel">
               <div class="project-header">
                 <h3>${project.title}</h3>
                 ${

@@ -542,7 +542,6 @@ body {
 }
 
 .cards-grid,
-.projects-grid,
 .skills-grid,
 .teaching-grid,
 .interests-grid {
@@ -552,7 +551,7 @@ body {
 }
 
 .feature-card,
-.project-card,
+.project-item,
 .skill-category,
 .teaching-card,
 .experience-card,
@@ -579,7 +578,7 @@ body {
 }
 
 .feature-card h3,
-.project-card h3,
+.project-item h3,
 .education-card h3,
 .experience-card h3,
 .award-content h3,
@@ -596,6 +595,7 @@ body {
 }
 
 .publications-list,
+.projects-list,
 .education-cards,
 .experience-timeline,
 .awards-container,
@@ -604,7 +604,8 @@ body {
   gap: 1rem;
 }
 
-.publication-item {
+.publication-item,
+.project-item {
   padding: clamp(1.2rem, 2.4vw, 1.65rem);
   display: grid;
   gap: 0.65rem;
@@ -644,7 +645,8 @@ body {
   text-transform: capitalize;
 }
 
-.publication-item h3 {
+.publication-item h3,
+.project-item h3 {
   color: var(--primary);
   font-size: 1.08rem;
 }
@@ -681,11 +683,6 @@ body {
   color: var(--accent-strong);
   font-size: 0.92rem;
   font-weight: 650;
-}
-
-.project-card {
-  display: grid;
-  gap: 0.95rem;
 }
 
 .project-link {
@@ -1158,7 +1155,6 @@ body {
   .metrics,
   .about-block-container,
   .cards-grid,
-  .projects-grid,
   .skills-grid,
   .teaching-grid,
   .interests-grid,
