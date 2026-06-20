@@ -5,7 +5,7 @@ export const createHighlights = ({ highlights }) =>
     <section id="about" class="content-section">
       <div class="section-heading">
         <p class="eyebrow">Strengths</p>
-        <h2>Why Riya Stands Out</h2>
+        <h2>Research profile differentiators</h2>
       </div>
       <div class="cards-grid">
         ${createList(

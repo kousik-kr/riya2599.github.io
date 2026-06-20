@@ -1,34 +1,74 @@
 import { createElementFromHTML, createList } from '../utils/dom.js';
 
-export const createHero = ({ fullName, role, university, location, heroStatement, focusAreas, advisor, profilePhoto }) =>
+export const createHero = ({
+  fullName,
+  role,
+  headline,
+  affiliation,
+  location,
+  heroStatement,
+  focusAreas,
+  heroBadges,
+  heroFacts,
+  profilePhoto,
+  resumeUrl
+}) =>
   createElementFromHTML(`
-    <section id="home" class="hero section-grid">
-      <div class="hero-content">
+    <section id="home" class="hero">
+      <div class="hero-content glass-panel">
+        <p class="eyebrow">Applied AI Researcher</p>
         <h1>${fullName}</h1>
-        <h2>${role}</h2>
-        <p class="hero-meta"><i class="fa-solid fa-building-columns"></i> ${university}</p>
-        <p class="hero-meta-location"><i class="fa-solid fa-map-pin"></i> ${location}</p>
-        <p class="hero-meta-advisor"><i class="fa-solid fa-user-tie"></i> Advisor: ${advisor}</p>
+        <p class="hero-role">${role}</p>
+        <p class="hero-headline">${headline}</p>
+        <div class="hero-meta-row">
+          <span><i class="fa-solid fa-building-columns"></i> ${affiliation}</span>
+          <span><i class="fa-solid fa-location-dot"></i> ${location}</span>
+        </div>
         <p class="hero-statement">${heroStatement}</p>
         <div class="focus-tags" aria-label="Research focus areas">
-          ${createList(focusAreas, (area) => `<span class="tag accent-tag"><i class="fa-solid fa-star"></i> ${area}</span>`)}
+          ${createList(
+            focusAreas,
+            (area) => `<span class="tag accent-tag"><i class="fa-solid fa-sparkles"></i> ${area}</span>`
+          )}
+        </div>
+        <div class="hero-badges" aria-label="Research profile badges">
+          ${createList(heroBadges, (badge) => `<span class="tag subtle-tag">${badge}</span>`)}
         </div>
         <div class="hero-actions">
-          <a href="/research.html" class="btn btn-primary"><i class="fa-solid fa-book-open"></i> View Research</a>
-          <a href="/contact.html" class="btn btn-secondary"><i class="fa-solid fa-envelope"></i> Get in Touch</a>
+          <a href="/research.html" class="btn btn-primary">
+            <i class="fa-solid fa-book-open-reader"></i>
+            Selected Research
+          </a>
+          <a href="/projects.html" class="btn btn-secondary">
+            <i class="fa-solid fa-diagram-project"></i>
+            Projects
+          </a>
+          <a href="${resumeUrl}" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-file-pdf"></i>
+            Download Resume
+          </a>
         </div>
       </div>
-      <aside class="hero-card glass-panel floating" aria-label="Profile and quick facts">
+
+      <aside class="hero-card glass-panel" aria-label="Research snapshot">
         <div class="profile-photo-container">
-          <img src="${profilePhoto}" alt="Riya Goyal" class="profile-photo" />
-          <span class="photo-badge"><i class="fa-solid fa-camera"></i></span>
+          <img src="${profilePhoto}" alt="${fullName}" class="profile-photo" />
+          <span class="photo-badge">RG</span>
         </div>
-        <h3><i class="fa-solid fa-fire"></i> Highlights</h3>
+        <div class="snapshot-copy">
+          <p class="eyebrow">Snapshot</p>
+          <h2>Research profile at a glance</h2>
+        </div>
         <ul class="quick-stats">
-          <li><strong>7</strong> Publications</li>
-          <li><strong>Top Tier</strong> Venues (NeurIPS, CHI)</li>
-          <li><strong>FAANG</strong> Internships</li>
-          <li><strong>2k+</strong> GitHub Stars</li>
+          ${createList(
+            heroFacts,
+            (fact) => `
+              <li>
+                <strong>${fact.value}</strong>
+                <span>${fact.label}</span>
+              </li>
+            `
+          )}
         </ul>
       </aside>
     </section>

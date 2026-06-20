@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /api/
 
-Sitemap: https://riyagoyal.com/sitemap.xml
+Sitemap: https://riya2599.github.io/sitemap.xml
