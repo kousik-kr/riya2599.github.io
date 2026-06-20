@@ -2,31 +2,36 @@ import { createElementFromHTML, createList } from '../utils/dom.js';
 
 export const createProjects = ({ projects }) =>
   createElementFromHTML(`
-    <main class="page-content">
-      <section class="page-hero glass-panel">
-        <p class="eyebrow">Projects</p>
-        <h1>Applied AI and software portfolio</h1>
-        <p class="page-subtitle">A project set spanning NLP research, deep learning, healthcare prediction, and academic software systems.</p>
-      </section>
-
-      <section class="projects-grid">
+    <section id="projects" class="content-section">
+      <div class="section-heading">
+        <p class="eyebrow">Portfolio</p>
+        <h2>Selected Academic Projects</h2>
+      </div>
+      <div class="projects-list">
         ${createList(
           projects,
           (project) => `
-            <article class="project-card glass-panel">
+            <article class="project-item glass-panel">
               <div class="project-header">
-                <span class="project-category">${project.category}</span>
-                <i class="fa-solid fa-arrow-up-right-from-square project-mark"></i>
+                <h3>${project.title}</h3>
+                ${
+                  project.link
+                    ? `<a href="${project.link}" class="project-link" aria-label="View ${project.title}">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                      </a>`
+                    : ''
+                }
               </div>
-              <h3>${project.title}</h3>
               <p class="project-description">${project.description}</p>
-              <div class="tech-stack">
-                ${createList(project.technologies, (tech) => `<span class="tech-badge">${tech}</span>`)}
+              <div class="project-meta">
+                <div class="tech-stack">
+                  ${createList(project.technologies, (tech) => `<span class="tech-badge">${tech}</span>`)}
+                </div>
+                <p class="project-impact"><i class="fa-solid fa-circle-info"></i> ${project.impact}</p>
               </div>
-              <p class="project-impact"><i class="fa-solid fa-flask-vial"></i> ${project.impact}</p>
             </article>
           `
         )}
-      </section>
-    </main>
+      </div>
+    </section>
   `);

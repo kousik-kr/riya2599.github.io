@@ -12,20 +12,26 @@ export const createEducation = ({ education }) =>
       <section class="education-cards">
         ${createList(
           education,
-          (edu) => `
-            <article class="education-card glass-panel">
-              <div class="edu-header">
-                <div>
-                  <h3>${edu.degree}</h3>
-                  <p class="institution"><i class="fa-solid fa-building"></i> ${edu.institution}</p>
+          (edu) => {
+            const result = edu.score || edu.gpa;
+
+            return `
+              <article class="education-card glass-panel">
+                <div class="edu-header">
+                  <div>
+                    <h3>${edu.degree}</h3>
+                    <p class="institution"><i class="fa-solid fa-building"></i> ${edu.institution}</p>
+                  </div>
+                  <span class="year">${edu.year}</span>
                 </div>
-                <span class="year">${edu.year}</span>
-              </div>
-              ${edu.focus ? `<p class="focus"><strong>Focus:</strong> ${edu.focus}</p>` : ''}
-              <p class="score"><strong>Score:</strong> ${edu.score}</p>
-              ${edu.notes ? `<p class="edu-notes">${edu.notes}</p>` : ''}
-            </article>
-          `
+                ${edu.focus ? `<p class="focus"><strong>Focus:</strong> ${edu.focus}</p>` : ''}
+                ${edu.advisor ? `<p class="advisor"><strong>Advisor:</strong> ${edu.advisor}</p>` : ''}
+                ${result ? `<p class="score"><strong>Score:</strong> ${result}</p>` : ''}
+                ${edu.honors ? `<p class="honors"><i class="fa-solid fa-medal"></i> ${edu.honors}</p>` : ''}
+                ${edu.notes ? `<p class="edu-notes">${edu.notes}</p>` : ''}
+              </article>
+            `;
+          }
         )}
       </section>
     </main>
